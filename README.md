@@ -22,3 +22,22 @@ The dimensionality of the images is 28x28; the images are grayscale.
 ## Report
 
 A max. 3 page report is found on Overleaf https://www.overleaf.com/project/601c07fdbef41b6d1745fe18
+
+## Requirements
+
+### Ubuntu
+
+Install Tensorflow 
+
+	# with NVIDIA GPU
+	pip3 install tensorflow
+
+	# without NVIDIA GPU
+	pip3 install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow_cpu-2.4.0-cp38-cp38-manylinux2010_x86_64.whl/cpu/tensorflow_cpu-2.4.0-cp38-cp38-manylinux2010_x86_64.whl
+
+Install Keras
+	pip3 install keras
+
+Verify installation
+	
+	python3 -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
