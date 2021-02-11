@@ -9,15 +9,27 @@ The dimensionality of the images is 28x28; the images are grayscale.
 
 ## Experiments
 
-1. NasNetMobile, MAX pooling
-2. NasNetMobile, AVG pooling
-3. DenseNet121, MAX pooling
-4. DenseNet121, AVG pooling
--> choose winnerCNN
-5. MLP, Softmax activation
-6. MLP, ReLu activation
-7. winnerCNN, Softmax activation
-8. winnerCNN, ReLu activation
+Initial parameters
+
+	optimizer: adam
+	pooling: AVG
+	weights: imagenet (pretrained, transfer learning)
+	epochs: 5
+
+1. Xception
+2. NasNetMobile
+3. DenseNet121
+4. MobileNetV2
+   		
+	--> Choose 1st and 2nd winner
+
+5. 1st, MAX pooling
+6. 2nd, MAX pooling
+
+	--> Choose 1st winner
+
+7. 1st, optimizer SDG
+8. 1st, optimizer RMSprop
 
 ## Report
 
