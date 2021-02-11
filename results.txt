@@ -1,0 +1,15 @@
+MobileNetV2 - Pooling: AVG
+
+-- FIT MODEL
+Epoch 1/5
+1875/1875 [==============================] - 351s 186ms/step - loss: 2.9714 - accuracy: 0.7062 - val_loss: 2.4620 - val_accuracy: 0.7870
+Epoch 2/5
+1875/1875 [==============================] - 361s 193ms/step - loss: 2.2293 - accuracy: 0.7708 - val_loss: 2.1589 - val_accuracy: 0.7894
+Epoch 3/5
+1875/1875 [==============================] - 373s 199ms/step - loss: 1.6518 - accuracy: 0.8479 - val_loss: 1.8886 - val_accuracy: 0.8128
+Epoch 4/5
+1875/1875 [==============================] - 366s 195ms/step - loss: 1.5970 - accuracy: 0.8627 - val_loss: 1.6580 - val_accuracy: 0.8681
+Epoch 5/5
+1875/1875 [==============================] - 366s 195ms/step - loss: 1.5741 - accuracy: 0.8639 - val_loss: 1.6342 - val_accuracy: 0.8522
+-- EVALUATE MODEL
+313/313 - 9s - loss: 1.6342 - accuracy: 0.8522
