@@ -1,9 +1,6 @@
 import tensorflow as tf
 import numpy as np
 
-def rescale(a):
-    return np.repeat(a[..., np.newaxis], 3, -1)
-
 def main():
     # Import data
     mnist = tf.keras.datasets.fashion_mnist
@@ -14,8 +11,8 @@ def main():
     x_test = np.kron(x_test, np.ones((2,2)))
 
     # Rescale grayscale images to "RGB"-images
-    x_train = rescale(x_train)
-    x_test = rescale(x_test)
+    x_train = np.repeat(x_train[..., np.newaxis], 3, -1)
+    x_test = np.repeat(x_test[..., np.newaxis], 3, -1)
     
     # Pretrained model
     model = tf.keras.applications.MobileNetV2(
@@ -28,10 +25,6 @@ def main():
     classes=1000,
     classifier_activation="softmax"
     )
-
-    # Preprocess training input
-    #x_train = tf.keras.applications.mobilenet_v2.preprocess_input(x_train)
-    #y_train = tf.keras.applications.mobilenet_v2.preprocess_input(y_train)
 
     # Train & evaluate model
     loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
