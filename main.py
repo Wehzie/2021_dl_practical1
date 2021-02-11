@@ -1,39 +1,39 @@
 import tensorflow as tf
 import numpy as np
 
+def rescale(a):
+    return np.repeat(a[..., np.newaxis], 3, -1)
+
 def main():
+    # Import data
     mnist = tf.keras.datasets.fashion_mnist
-
     (x_train, y_train), (x_test, y_test) = mnist.load_data()
+
+    # Upscale 28x28 by a factor of 2 to 56x56
+    x_train = np.kron(x_train, np.ones((2,2)))
+    x_test = np.kron(x_test, np.ones((2,2)))
+
+    # Rescale grayscale images to "RGB"-images
+    x_train = rescale(x_train)
+    x_test = rescale(x_test)
     
-    print("x_train shape:", x_train.shape)
-    x_train, x_test = x_train / 255.0, x_test / 255.0
-    print("x_train shape:", x_train.shape)
-    x_train = np.expand_dims(x_train, -1)
-    x_test = np.expand_dims(x_test, -1)
-    print("x_train shape:", x_train.shape)
-    print("y_train shape:", y_train.shape)
-
-    size = (224,224)
-    x_train = x_train.map(lambda image, label: (tf.image.resize(image, size), label))
-    print("x_train shape:", x_train.shape)
-
-    # pretrained model
+    # Pretrained model
     model = tf.keras.applications.MobileNetV2(
-    #input_shape=Input(shape(32,28,28)),
-    input_shape=None,
+    input_shape=(56,56,3),
     alpha=1.0,
-    include_top=True,
+    include_top=False,
     weights="imagenet",
     input_tensor=None,
-    pooling=None,
+    pooling="avg",
     classes=1000,
     classifier_activation="softmax"
     )
 
-    x_train = tf.keras.applications.mobilenet_v2.preprocess_input(x_train)
-    y_train = tf.keras.applications.mobilenet_v2.preprocess_input(y_train)
+    # Preprocess training input
+    #x_train = tf.keras.applications.mobilenet_v2.preprocess_input(x_train)
+    #y_train = tf.keras.applications.mobilenet_v2.preprocess_input(y_train)
 
+    # Train & evaluate model
     loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
     model.compile(optimizer='adam',
               loss=loss_fn,
