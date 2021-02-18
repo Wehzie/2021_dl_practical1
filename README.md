@@ -14,12 +14,13 @@ Initial parameters
 	optimizer: adam
 	pooling: AVG
 	weights: imagenet (pretrained, transfer learning)
+	loss function: sparse categorical cross-entropy
 	epochs: 5
 
-1. Xception
+1. MobileNetV2
 2. NasNetMobile
 3. DenseNet121
-4. MobileNetV2
+4. Xception
    		
 	--> Choose 1st and 2nd winner
 
