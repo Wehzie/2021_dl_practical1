@@ -1,0 +1,14 @@
+2021-02-24 23:50:00.876753: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 1497600000 Hz
+Epoch 1/5
+1875/1875 [==============================] - ETA: 0s - loss: 2.1880 - accuracy: 0.74832021-02-25 00:02:47.070180: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 376320000 exceeds 10% of free system memory.
+1875/1875 [==============================] - 782s 415ms/step - loss: 2.1877 - accuracy: 0.7483 - val_loss: 1.4645 - val_accuracy: 0.8390
+Epoch 2/5
+1875/1875 [==============================] - 721s 385ms/step - loss: 1.5275 - accuracy: 0.8030 - val_loss: 1.4566 - val_accuracy: 0.8285
+Epoch 3/5
+1875/1875 [==============================] - 732s 390ms/step - loss: 1.4730 - accuracy: 0.8095 - val_loss: 1.4493 - val_accuracy: 0.8095
+Epoch 4/5
+1875/1875 [==============================] - 735s 392ms/step - loss: 1.4450 - accuracy: 0.8291 - val_loss: 1.4179 - val_accuracy: 0.8346
+Epoch 5/5
+1875/1875 [==============================] - 723s 386ms/step - loss: 1.4282 - accuracy: 0.8416 - val_loss: 1.4324 - val_accuracy: 0.8445
+2021-02-25 00:51:35.431488: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 376320000 exceeds 10% of free system memory.
+313/313 - 15s - loss: 1.4324 - accuracy: 0.8445
