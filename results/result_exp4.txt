@@ -1,0 +1,14 @@
+Epoch 1/5
+1875/1875 [==============================] - 322s 161ms/step - loss: 6.0869 - accuracy: 0.4046 - val_loss: 2.3310 - val_accuracy: 0.7842
+Epoch 2/5
+1875/1875 [==============================] - 372s 199ms/step - loss: 1.9510 - accuracy: 0.8024 - val_loss: 1.3326 - val_accuracy: 0.7929
+Epoch 3/5
+1875/1875 [==============================] - 303s 162ms/step - loss: 1.2161 - accuracy: 0.8166 - val_loss: 1.0241 - val_accuracy: 0.8229
+Epoch 4/5
+1875/1875 [==============================] - 330s 176ms/step - loss: 1.0407 - accuracy: 0.8306 - val_loss: 0.9900 - val_accuracy: 0.8281
+Epoch 5/5
+1875/1875 [==============================] - 311s 166ms/step - loss: 0.9609 - accuracy: 0.8419 - val_loss: 1.0466 - val_accuracy: 0.8008
+<tensorflow.python.keras.callbacks.History object at 0x0000013A9C7761C0>
+>>> model.evaluate(x_test,  y_test, verbose=1)
+313/313 [==============================] - 16s 52ms/step - loss: 1.0466 - accuracy: 0.8008
+[1.046555519104004, 0.8008000254631042]
