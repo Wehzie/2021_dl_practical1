@@ -18,9 +18,9 @@ Initial parameters
 	epochs: 5
 
 1. MobileNetV2
-2. NasNetMobile
+2. MobileNet
 3. DenseNet121
-4. Xception
+4. DenseNet169
    		
 	--> Choose 1st and 2nd winner
 

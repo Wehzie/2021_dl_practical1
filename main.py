@@ -26,7 +26,7 @@ def run_exp1(x_train, y_train, x_test, y_test):
 def run_exp2(x_train, y_train, x_test, y_test):
 
     # initialize model
-    model = tf.keras.applications.NASNetMobile(
+    model = tf.keras.applications.MobileNet(
     input_shape=(56,56,3),
     include_top=False,
     weights="imagenet",
@@ -60,7 +60,7 @@ def run_exp3(x_train, y_train, x_test, y_test):
 def run_exp4(x_train, y_train, x_test, y_test):
 
     # initialize model
-    model = tf.keras.applications.Xception(
+    model = tf.keras.applications.DenseNet169(
     input_shape=(56,56,3),
     include_top=False,
     weights="imagenet",
@@ -103,6 +103,6 @@ def main():
     x_test = np.repeat(x_test[..., np.newaxis], 3, -1)
 
     # Run experiments
-    run_exp2(x_train, y_train, x_test, y_test)
+    run_exp3(x_train, y_train, x_test, y_test)
 
 main()
