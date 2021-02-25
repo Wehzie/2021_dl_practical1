@@ -1,0 +1,10 @@
+Epoch 1/5
+1875/1875 [==============================] - 240s 122ms/step - loss: 4.7925 - accuracy: 0.4320 - val_loss: 0.6274 - val_accuracy: 0.8959
+Epoch 2/5
+1875/1875 [==============================] - 224s 120ms/step - loss: 0.6112 - accuracy: 0.9035 - val_loss: 0.2838 - val_accuracy: 0.9278
+Epoch 3/5
+1875/1875 [==============================] - 236s 126ms/step - loss: 0.3421 - accuracy: 0.9250 - val_loss: 0.2284 - val_accuracy: 0.9368
+Epoch 4/5
+1875/1875 [==============================] - 212s 113ms/step - loss: 0.2431 - accuracy: 0.9401 - val_loss: 0.2183 - val_accuracy: 0.9362
+Epoch 5/5
+1875/1875 [==============================] - 184s 98ms/step - loss: 0.1878 - accuracy: 0.9512 - val_loss: 0.2046 - val_accuracy: 0.9377
